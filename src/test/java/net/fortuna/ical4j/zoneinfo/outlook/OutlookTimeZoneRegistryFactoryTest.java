@@ -35,6 +35,7 @@ import junit.framework.Assert;
 import net.fortuna.ical4j.model.Property;
 import net.fortuna.ical4j.model.TimeZone;
 import net.fortuna.ical4j.model.TimeZoneRegistry;
+import net.fortuna.ical4j.model.TimeZoneRegistryFactory;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -56,6 +57,17 @@ public class OutlookTimeZoneRegistryFactoryTest {
     @Test
     public void testCreateRegistry() {
         TimeZoneRegistry registry = factory.createRegistry();
+        
+        Assert.assertNotNull(registry);
+        TimeZone tz = registry.getTimeZone("Australia/Melbourne");
+        Assert.assertEquals("Australia/Melbourne", tz.getVTimeZone().getProperty(Property.TZID).getValue());
+        Assert.assertEquals("http://tzurl.org/zoneinfo-outlook/Australia/Melbourne",
+                tz.getVTimeZone().getProperty(Property.TZURL).getValue());
+    }
+    
+    @Test
+    public void testCreateRegistryConfigured() {
+        TimeZoneRegistry registry = TimeZoneRegistryFactory.getInstance().createRegistry();
         
         Assert.assertNotNull(registry);
         TimeZone tz = registry.getTimeZone("Australia/Melbourne");
