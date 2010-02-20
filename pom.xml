@@ -30,4 +30,17 @@
 		<developerConnection>scm:cvs:ext:fortuna@ical4j.cvs.sourceforge.net:/cvsroot/ical4j:ical4j-zoneinfo-outlook</developerConnection>
 		<url>http://ical4j.cvs.sourceforge.net/ical4j/ical4j-zoneinfo-outlook</url>
 	</scm>
+	<dependencies>
+		<dependency>
+			<groupId>net.fortuna.ical4j</groupId>
+			<artifactId>ical4j</artifactId>
+			<version>1.0-rc3-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>
