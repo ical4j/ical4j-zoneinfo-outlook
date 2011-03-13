@@ -41,7 +41,7 @@ import net.fortuna.ical4j.model.TimeZoneRegistryImpl;
  */
 public class OutlookTimeZoneRegistryFactory extends TimeZoneRegistryFactory {
 
-    private static final String RESOURCE_PREFIX = "/zoneinfo-outlook/";
+    private static final String RESOURCE_PREFIX = "zoneinfo-outlook/";
 
     /**
      * {@inheritDoc}
