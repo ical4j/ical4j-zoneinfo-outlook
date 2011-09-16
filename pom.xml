@@ -3,7 +3,7 @@
 	<parent>
 		<artifactId>modularity-parent</artifactId>
 		<groupId>net.modularity</groupId>
-		<version>1.0.11-SNAPSHOT</version>
+		<version>1.0.11</version>
 	</parent>
 	<groupId>net.fortuna.ical4j</groupId>
 	<artifactId>ical4j-zoneinfo-outlook</artifactId>
@@ -82,7 +82,7 @@
 		<dependency>
 			<groupId>net.fortuna.ical4j</groupId>
 			<artifactId>ical4j</artifactId>
-			<version>1.0</version>
+			<version>1.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
