@@ -26,7 +26,7 @@
 
 	<scm>
 		<connection>scm:hg:http://ical4j.hg.sourceforge.net:8000/hgroot/ical4j/ical4j-zoneinfo-outlook</connection>
-		<developerConnection>scm:hg:ssh://ical4j.hg.sourceforge.net/hgroot/ical4j/ical4j-zoneinfo-outlook</developerConnection>
+		<developerConnection>scm:hg:ssh://fortuna@ical4j.hg.sourceforge.net/hgroot/ical4j/ical4j-zoneinfo-outlook</developerConnection>
 		<url>http://ical4j.hg.sourceforge.net/hgweb/ical4j/ical4j-zoneinfo-outlook/</url>
   </scm>
 	
