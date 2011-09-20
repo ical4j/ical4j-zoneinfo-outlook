@@ -8,7 +8,7 @@
 	<groupId>net.fortuna.ical4j</groupId>
 	<artifactId>ical4j-zoneinfo-outlook</artifactId>
 	<name>iCal4j ZoneInfo Outlook</name>
-	<version>1.0.2a-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<description>MS Outlook-compatible Timezone Definitions</description>
 	<url>http://ical4j.sourceforge.net</url>
 	<issueManagement>
