@@ -30,6 +30,15 @@
 		<url>http://ical4j.hg.sourceforge.net/hgweb/ical4j/ical4j-zoneinfo-outlook/</url>
   </scm>
 	
+	<distributionManagement>
+	   <relocation>
+	       <artifactId>ical4j-zoneinfo-outlook</artifactId>
+	       <groupId>org.mnode.ical4j</groupId>
+	       <version>1.0.3</version>
+	       <message>Changed group ID for upload to Maven central</message>
+	   </relocation>
+	</distributionManagement>
+	
 	<build>
 		<plugins>
 			<plugin>
