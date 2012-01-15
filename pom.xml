@@ -3,7 +3,7 @@
 	<parent>
 		<artifactId>mnode-parent</artifactId>
 		<groupId>org.mnode</groupId>
-		<version>1.5</version>
+		<version>1.6</version>
 	</parent>
 	<groupId>org.mnode.ical4j</groupId>
 	<artifactId>ical4j-zoneinfo-outlook</artifactId>
@@ -31,6 +31,11 @@
 	
 	<build>
 		<plugins>
+            <plugin>
+                <groupId>com.mycila.maven-license-plugin</groupId>
+                <artifactId>maven-license-plugin</artifactId>
+            </plugin>
+            
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
@@ -59,7 +64,7 @@
 		<dependency>
 			<groupId>org.mnode.ical4j</groupId>
 			<artifactId>ical4j</artifactId>
-			<version>[1.0.2,2.0-SNAPSHOT)</version>
+			<version>[1.0.2,2.0-beta1-SNAPSHOT)</version>
 		</dependency>
 		
 		<dependency>
