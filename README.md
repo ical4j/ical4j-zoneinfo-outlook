@@ -1,10 +1,9 @@
-
 MS Outlook-compatible Timezone Definitions
 ==========================================
 
 iCal4j ZoneInfo Outlook provides alternate timezone definitions that may provide greater compatibility with certain versions of Microsoft Outlook.
 
-# Usage
+## Usage
 
 To use the alternate timezone definitions you may create a custom TimeZoneRegistry instance using the applicable prefix:
 
@@ -23,6 +22,6 @@ To use the alternate timezone definitions you may create a custom TimeZoneRegist
 A convenient factory for the Outlook-compatible definitions is also provided, so in such cases all you need to do is add the following property to your ical4j.properties included in your classpath:
 net.fortuna.ical4j.timezone.registry=net.fortuna.ical4j.zoneinfo.outlook.OutlookTimeZoneRegistryFactory
 
-# Minimum requirements
+## Minimum requirements
 
 None.
