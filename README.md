@@ -1,7 +1,7 @@
 MS Outlook-compatible Timezone Definitions
 ==========================================
 
-iCal4j ZoneInfo Outlook provides alternate timezone definitions that may provide greater compatibility with certain versions of Microsoft Outlook.
+iCal4j ZoneInfo Outlook provides alternate timezone definitions that may provide greater compatibility with certain versions of Microsoft Outlook. These definitions are generated using [tzurl](http://code.google.com/p/tzurl) - a fork of vzic, and apparently avoid things Outlook doesn't like (such as RDATE properties).
 
 ## Usage
 
