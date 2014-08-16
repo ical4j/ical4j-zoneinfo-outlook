@@ -1,3 +1,5 @@
+[![Build Status](https://drone.io/github.com/ical4j/ical4j-zoneinfo-outlook/status.png)](https://drone.io/github.com/ical4j/ical4j-zoneinfo-outlook/latest)
+
 MS Outlook-compatible Timezone Definitions
 ==========================================
 
