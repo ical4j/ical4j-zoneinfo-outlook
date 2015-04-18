@@ -52,7 +52,7 @@ release {
     failOnSnapshotDependencies = true
     // allow modifications due to bug in the release plugin..
     allowLocalModifications = true
-    releaseDryRun = project.hasProperty('releaseDryRun') ? project.getProperty('releaseDryRun') : true
+    releaseDryRun = project.releaseDryRun
     scm = 'git'
 }
 
@@ -67,6 +67,8 @@ ext {
     // sonatype credentials
     sonatypeUsername = project.hasProperty('sonatypeUsername') ? project.getProperty('sonatypeUsername') : ''
     sonatypePassword = project.hasProperty('sonatypePassword') ? project.getProperty('sonatypePassword') : ''
+
+    releaseDryRun = project.hasProperty('releaseDryRun') ? project.getProperty('releaseDryRun') : true
 }
 
 uploadArchives {
