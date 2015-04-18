@@ -52,7 +52,7 @@ release {
     failOnSnapshotDependencies = true
     // allow modifications due to bug in the release plugin..
     allowLocalModifications = true
-    releaseDryRun = true
+    releaseDryRun = project.hasProperty('releaseDryRun') ? project.getProperty('releaseDryRun') : true
     scm = 'git'
 }
 
