@@ -22,7 +22,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.mnode.ical4j:ical4j:1.0.5.2'
+    compile 'org.mnode.ical4j:ical4j:2.0-alpha1'
 
     testCompile 'junit:junit:4.11'
 }
@@ -58,10 +58,16 @@ release {
 
 group = 'org.mnode.ical4j'
 version = release.projectVersion
-description = '''
+description = '''\
 MS Outlook-compatible Timezone Definitions
 '''
-ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
+ext {
+    isReleaseVersion = !version.endsWith("SNAPSHOT")
+
+    // sonatype credentials
+    sonatypeUsername = project.hasProperty('sonatypeUsername') ? project.getProperty('sonatypeUsername') : ''
+    sonatypePassword = project.hasProperty('sonatypePassword') ? project.getProperty('sonatypePassword') : ''
+}
 
 uploadArchives {
     repositories {
