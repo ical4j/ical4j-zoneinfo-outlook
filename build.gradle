@@ -55,7 +55,7 @@ release {
     failOnSnapshotDependencies = true
     // allow modifications due to bug in the release plugin..
     allowLocalModifications = true
-    releaseDryRun = true
+//    releaseDryRun = true
     scm = 'git'
 }
 
@@ -113,8 +113,4 @@ uploadArchives {
             }
         }
     }
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.11'
 }
