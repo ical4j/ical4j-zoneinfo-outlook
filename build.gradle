@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.mnode.ical4j:ical4j:2.0-alpha1'
+    compile 'org.mnode.ical4j:ical4j:2.0-beta1'
 
     testCompile 'junit:junit:4.11'
 }
