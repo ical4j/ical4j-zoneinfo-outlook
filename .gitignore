@@ -2,3 +2,5 @@
 ical4j-zoneinfo-outlook.iml
 build
 .gradle
+zones.tab
+zones.h
