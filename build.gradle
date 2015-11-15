@@ -63,7 +63,12 @@ version = System.getenv('RELEASE_VERSION') ?: release.projectVersion
 description = '''
 MS Outlook-compatible Timezone Definitions
 '''
-ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
+ext {
+    isReleaseVersion = !version.endsWith("SNAPSHOT")
+
+    sonatypeUsername = project.hasProperty('sonatypeUsername') ? project.getProperty('sonatypeUsername') : ''
+    sonatypePassword = project.hasProperty('sonatypePassword') ? project.getProperty('sonatypePassword') : ''
+}
 
 uploadArchives {
     repositories {
