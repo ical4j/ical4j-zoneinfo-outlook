@@ -1,3 +1,5 @@
+import aQute.bnd.osgi.Jar
+
 buildscript {
     repositories {
         mavenCentral()
@@ -7,7 +9,9 @@ buildscript {
     }
 
     dependencies {
-        classpath 'au.com.ish.gradle:release:2.2.2'
+        classpath('au.com.ish.gradle:release:2.2.2') {
+            exclude module: 'svnkit'
+        }
     }
 }
 
@@ -22,7 +26,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.mnode.ical4j:ical4j:1.0.5.2'
+    compile 'org.mnode.ical4j:ical4j:1.0.7-SNAPSHOT'
 
     testCompile 'junit:junit:4.11'
 }
