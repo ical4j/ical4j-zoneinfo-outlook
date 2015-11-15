@@ -1,5 +1,3 @@
-import aQute.bnd.osgi.Jar
-
 buildscript {
     repositories {
         mavenCentral()
