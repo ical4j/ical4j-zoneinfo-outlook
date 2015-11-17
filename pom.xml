@@ -8,7 +8,7 @@
 	<groupId>org.mnode.ical4j</groupId>
 	<artifactId>ical4j-zoneinfo-outlook</artifactId>
 	<name>iCal4j ZoneInfo Outlook</name>
-	<version>1.0.4-SNAPSHOT</version>
+	<version>1.0.4</version>
 	<description>MS Outlook-compatible Timezone Definitions</description>
 	<url>http://ical4j.sourceforge.net</url>
 	<issueManagement>
@@ -22,6 +22,10 @@
 			<url>${project.scm.url}/raw-file/tip/LICENSE</url>
 		</license>
 	</licenses>
+
+    <prerequisites>
+        <maven>2.2.1</maven>
+    </prerequisites>
 
 	<scm>
 		<connection>scm:git:https://github.com/ical4j/ical4j-zoneinfo-outlook.git</connection>
@@ -83,7 +87,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
@@ -101,7 +105,7 @@
 		<dependency>
 			<groupId>org.mnode.ical4j</groupId>
 			<artifactId>ical4j</artifactId>
-			<version>1.0.5</version>
+			<version>1.0.7</version>
 		</dependency>
 		
 		<dependency>

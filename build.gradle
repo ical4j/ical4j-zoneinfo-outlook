@@ -7,7 +7,9 @@ buildscript {
     }
 
     dependencies {
-        classpath 'au.com.ish.gradle:release:2.2.2'
+        classpath('au.com.ish.gradle:release:2.2.2') {
+            exclude module: 'svnkit'
+        }
     }
 }
 
@@ -22,9 +24,22 @@ repositories {
 }
 
 dependencies {
-    compile 'org.mnode.ical4j:ical4j:1.0.5.2'
+    compile 'org.mnode.ical4j:ical4j:1.0.7'
 
     testCompile 'junit:junit:4.11'
+}
+
+group = 'org.mnode.ical4j'
+version = System.getenv('RELEASE_VERSION') ?: release.projectVersion
+description = '''
+MS Outlook-compatible Timezone Definitions
+'''
+
+ext {
+    isReleaseVersion = !version.endsWith("SNAPSHOT")
+
+    sonatypeUsername = project.hasProperty('sonatypeUsername') ? project.getProperty('sonatypeUsername') : ''
+    sonatypePassword = project.hasProperty('sonatypePassword') ? project.getProperty('sonatypePassword') : ''
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
@@ -44,7 +59,8 @@ artifacts {
 }
 
 signing {
-    required { isReleaseVersion && gradle.taskGraph.hasTask("uploadArchives") }
+    //required { isReleaseVersion && gradle.taskGraph.hasTask("uploadArchives") }
+    required { isReleaseVersion }
     sign configurations.archives
 }
 
@@ -52,16 +68,8 @@ release {
     failOnSnapshotDependencies = true
     // allow modifications due to bug in the release plugin..
     allowLocalModifications = true
-    releaseDryRun = true
     scm = 'git'
 }
-
-group = 'org.mnode.ical4j'
-version = release.projectVersion
-description = '''
-MS Outlook-compatible Timezone Definitions
-'''
-ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
 uploadArchives {
     repositories {
@@ -79,7 +87,7 @@ uploadArchives {
                 name 'iCal4j ZoneInfo Outlook'
                 packaging 'jar'
                 description project.description
-                url 'http://ical4j.sourceforge.net'
+                url 'http://ical4j.github.io'
 
                 scm {
                     url 'https://github.com/ical4j/ical4j-zoneinfo-outlook'
