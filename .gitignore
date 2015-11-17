@@ -4,3 +4,4 @@ build
 .gradle
 zones.tab
 zones.h
+target
