@@ -54,7 +54,6 @@ release {
     failOnSnapshotDependencies = true
     // allow modifications due to bug in the release plugin..
     allowLocalModifications = true
-    releaseDryRun = true
     scm = 'git'
 }
 
@@ -86,7 +85,7 @@ uploadArchives {
                 name 'iCal4j ZoneInfo Outlook'
                 packaging 'jar'
                 description project.description
-                url 'http://ical4j.sourceforge.net'
+                url 'http://ical4j.github.io'
 
                 scm {
                     url 'https://github.com/ical4j/ical4j-zoneinfo-outlook'
