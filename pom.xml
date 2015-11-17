@@ -23,6 +23,10 @@
 		</license>
 	</licenses>
 
+    <prerequisites>
+        <maven>2.2.1</maven>
+    </prerequisites>
+
 	<scm>
 		<connection>scm:git:https://github.com/ical4j/ical4j-zoneinfo-outlook.git</connection>
                 <developerConnection>scm:git:ssh://git@github.com:ical4j/ical4j-zoneinfo-outlook.git</developerConnection>
