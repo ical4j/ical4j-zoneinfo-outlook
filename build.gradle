@@ -29,6 +29,12 @@ dependencies {
     testCompile 'junit:junit:4.11'
 }
 
+group = 'org.mnode.ical4j'
+version = System.getenv('RELEASE_VERSION') ?: release.projectVersion
+description = '''
+MS Outlook-compatible Timezone Definitions
+'''
+
 ext {
     isReleaseVersion = !version.endsWith("SNAPSHOT")
 
@@ -64,12 +70,6 @@ release {
     allowLocalModifications = true
     scm = 'git'
 }
-
-group = 'org.mnode.ical4j'
-version = System.getenv('RELEASE_VERSION') ?: release.projectVersion
-description = '''
-MS Outlook-compatible Timezone Definitions
-'''
 
 uploadArchives {
     repositories {
