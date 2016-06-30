@@ -4,3 +4,7 @@ jdk:
 - oraclejdk7
 - openjdk7
 sudo: false
+after_script:
+  - sudo keytool -import -alias sonar -keystore $JAVA_HOME/jre/lib/security/cacerts -file sonar_cert.pem -storepass changeit -noprompt
+  # Check if commit is not a pull request, if git repo is official, and if branch is master. If checks pass, run Sonar reports
+  - "[[ $TRAVIS_PULL_REQUEST == false ]] && [[ $TRAVIS_REPO_SLUG == ical4j/ical4j-zoneinfo-outlook ]] && [[ $TRAVIS_BRANCH == master ]] && ./gradlew sonarqube"
