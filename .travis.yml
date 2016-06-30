@@ -1,8 +1,10 @@
 language: java
 jdk:
-- oraclejdk8
-- oraclejdk7
-- openjdk7
+  - oraclejdk8
+  - oraclejdk7
+  - openjdk7
+script:
+  - ./gradlew check
 sudo: false
 after_script:
   - sudo keytool -import -alias sonar -keystore $JAVA_HOME/jre/lib/security/cacerts -file sonar_cert.pem -storepass changeit -noprompt
