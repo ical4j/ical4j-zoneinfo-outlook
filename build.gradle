@@ -1,13 +1,10 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven {
-            url 'http://maven.tmatesoft.com/content/repositories/releases/'
-        }
     }
 
     dependencies {
-        classpath 'au.com.ish.gradle:release:2.2.2'
+        classpath group: 'pl.allegro.tech.build', name: 'axion-release-plugin', version: '1.4.0'
     }
 }
 
@@ -15,7 +12,7 @@ apply plugin: 'groovy'
 apply plugin: 'osgi'
 apply plugin: 'maven'
 apply plugin: 'signing'
-apply plugin: 'release'
+apply plugin: 'pl.allegro.tech.build.axion-release'
 
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
@@ -25,7 +22,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.mnode.ical4j:ical4j:2.0-beta1'
+    compile 'org.mnode.ical4j:ical4j:2.0.0-rc2'
 
     testCompile 'junit:junit:4.11'
 }
@@ -51,16 +48,14 @@ signing {
     sign configurations.archives
 }
 
-release {
-    failOnSnapshotDependencies = true
-    // allow modifications due to bug in the release plugin..
-    allowLocalModifications = true
-//    releaseDryRun = true
-    scm = 'git'
+scmVersion {
+    tag {
+        prefix = 'ical4j-zoneinfo-outlook'
+    }
 }
 
 group = 'org.mnode.ical4j'
-version = release.projectVersion
+version = scmVersion.version
 description = '''\
 MS Outlook-compatible Timezone Definitions
 '''
