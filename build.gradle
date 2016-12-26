@@ -8,8 +8,13 @@ buildscript {
     }
 }
 
+plugins {
+  id "org.sonarqube" version "1.2"
+}
+
 apply plugin: 'groovy'
 apply plugin: 'osgi'
+apply plugin: 'jacoco'
 apply plugin: 'maven'
 apply plugin: 'signing'
 apply plugin: 'pl.allegro.tech.build.axion-release'
@@ -52,6 +57,10 @@ scmVersion {
     tag {
         prefix = 'ical4j-zoneinfo-outlook'
     }
+    versionCreator 'versionWithBranch'
+    branchVersionCreator = [
+        'release/.*': 'simple'
+    ]
 }
 
 group = 'org.mnode.ical4j'
@@ -80,7 +89,7 @@ uploadArchives {
             }
 
             pom.project {
-                name 'iCal4j ZoneInfo Outlook'
+                name project.name
                 packaging 'jar'
                 description project.description
                 url 'http://ical4j.sourceforge.net'
