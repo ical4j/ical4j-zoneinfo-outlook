@@ -16,12 +16,12 @@ services:
 before_install:
   - etc/update-zoneinfo.sh
 script:
-  - ./gradlew build jacocoTestReport
+  - ./gradlew -q build jacocoTestReport
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: script
-  script: ./gradlew -Prelease.customUsername=$GIT_USER -Prelease.customPassword=$GIT_PASSWORD -Prelease.disableChecks -Prelease.pushTagsOnly release bintrayUpload
+  script: ./gradlew -q -Prelease.customUsername=$GIT_USER -Prelease.customPassword=$GIT_PASSWORD -Prelease.disableChecks -Prelease.pushTagsOnly release bintrayUpload
   on:
     branch: master
     jdk: oraclejdk8
