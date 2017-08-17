@@ -11,6 +11,10 @@ language: java
 jdk:
   - oraclejdk8
   - openjdk8
+services:
+  - docker
+before_install:
+  - etc/update-zoneinfo.sh
 script:
   - ./gradlew build jacocoTestReport
 after_success:
