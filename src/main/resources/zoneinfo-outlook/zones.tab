@@ -166,6 +166,7 @@
 +0103900 -0613100 America/Port_of_Spain
 -0084600 -0635400 America/Porto_Velho
 +0182806 -0660622 America/Puerto_Rico
+-0530900 -0705500 America/Punta_Arenas
 +0484300 -0943400 America/Rainy_River
 +0624900 -0920459 America/Rankin_Inlet
 -0080300 -0345400 America/Recife
@@ -436,7 +437,6 @@
 -0093200 +1601200 Pacific/Guadalcanal
 +0132800 +1444500 Pacific/Guam
 +0211825 -1575130 Pacific/Honolulu
-+0164500 -1693100 Pacific/Johnston
 +0015200 -1572000 Pacific/Kiritimati
 +0051900 +1625900 Pacific/Kosrae
 +0090500 +1672000 Pacific/Kwajalein
