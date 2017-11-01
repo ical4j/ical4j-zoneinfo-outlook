@@ -22,6 +22,7 @@ after_success:
 deploy:
   provider: script
   script: ./gradlew -q -Prelease.customUsername=$GIT_USER -Prelease.customPassword=$GIT_PASSWORD -Prelease.disableChecks -Prelease.pushTagsOnly release bintrayUpload
+  skip_cleanup: true
   on:
     branch: master
     jdk: oraclejdk8
