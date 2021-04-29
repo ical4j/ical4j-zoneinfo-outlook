@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2020b//EN
+PRODID:-//tzurl.org//NONSGML Olson 2021a//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2020b/Asia/Omsk
-LAST-MODIFIED:20201011T015912Z
+TZID:/tzurl.org/2021a/Asia/Omsk
+LAST-MODIFIED:20210429T002737Z
 TZURL:http://tzurl.org/zoneinfo-outlook-global/Asia/Omsk
 X-LIC-LOCATION:Asia/Omsk
 BEGIN:STANDARD
