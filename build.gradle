@@ -69,6 +69,10 @@ group = 'org.mnode.ical4j'
 description = 'Alternate timezone definitions for greater compatbility with Outlook'
 version = scmVersion.version
 
+ext {
+    isReleaseVersion = !version.endsWith("SNAPSHOT")
+}
+
 publishing {
     publications {
         mavenArtifacts(MavenPublication) {
@@ -110,6 +114,6 @@ publishing {
 }
 
 signing {
-    required = true
+    required { isReleaseVersion }
     sign publishing.publications.mavenArtifacts
 }
