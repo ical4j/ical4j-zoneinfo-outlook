@@ -1,80 +1,63 @@
-import aQute.bnd.gradle.Bundle
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.hidetake:gradle-ssh-plugin:2.10.1'
-        classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:4.2.0'
-    }
-}
-
 plugins {
-    id 'pl.allegro.tech.build.axion-release' version '1.10.2'
-    id "com.jfrog.bintray" version "1.8.4"
+    id 'java'
+    id 'groovy'
+    id "biz.aQute.bnd.builder" version "5.1.2"
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
+    id 'pl.allegro.tech.build.axion-release' version '1.13.1'
 }
-
-apply plugin: 'groovy'
-apply plugin: 'biz.aQute.bnd.builder'
-apply plugin: 'maven'
-apply plugin: 'maven-publish'
-apply plugin: 'jacoco'
-apply plugin: 'signing'
-apply plugin: 'pl.allegro.tech.build.axion-release'
-apply from: 'gradle/dist.gradle'
-
-group = 'org.mnode.ical4j'
-description = '''\
-MS Outlook-compatible Timezone Definitions
-'''
-
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
 
 repositories {
     mavenCentral()
-    // sonatype snapshots
-    maven {
-        url 'https://oss.sonatype.org/content/repositories/snapshots/'
-    }
 }
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 dependencies {
-    compile 'org.mnode.ical4j:ical4j:2.+'
+    api "org.mnode.ical4j:ical4j:$ical4jVersion"
 
-    testCompile 'junit:junit:4.11'
+
+    testCompile "org.codehaus.groovy:groovy:$groovyVersion"
+
+    // junit
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.7.1'
+
+    testImplementation platform("org.spockframework:spock-bom:2.0-M4-groovy-3.0"),
+        "org.spockframework:spock-core",
+        "org.slf4j:slf4j-log4j12:$slf4jVersion"
 }
 
-task bundle(type: Bundle) {
-    from(project.rootDir) {
-        include "LICENSE.txt"
+test {
+    useJUnitPlatform()
+}
+
+javadoc {
+    options {
+        links 'https://docs.oracle.com/en/java/javase/11/docs/api/',
+            'http://ical4j.github.io/docs/ical4j/api/4.0.0-alpha6/'
     }
-    from sourceSets.main.output
-    bndfile = 'bnd.bnd'
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    archiveClassifier = 'javadoc'
+    archiveClassifier.set('javadoc')
     from 'build/docs/javadoc'
 }
 
 task sourcesJar(type: Jar) {
     from sourceSets.main.allSource
-    archiveClassifier = 'sources'
+    archiveClassifier.set('sources')
 }
 
-jar.enabled = false
-
 artifacts {
-    archives bundle
     archives javadocJar
     archives sourcesJar
 }
 
 scmVersion {
     tag {
-        prefix = 'ical4j-zoneinfo-outlook'
+        prefix = 'ical4j-zoneinfo-outlook-'
     }
     versionCreator 'versionWithBranch'
     branchVersionCreator = [
@@ -82,54 +65,9 @@ scmVersion {
     ]
 }
 
+group = 'org.mnode.ical4j'
+description = 'Alternate timezone definitions for greater compatbility with Outlook'
 version = scmVersion.version
-
-ext {
-    isReleaseVersion = !version.endsWith("SNAPSHOT")
-}
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-
-            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-                authentication(userName: sonatype_username, password: sonatype_password)
-            }
-            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots") {
-                authentication(userName: sonatype_username, password: sonatype_password)
-            }
-
-            pom.project {
-                name project.name
-                packaging 'jar'
-                description project.description
-                url 'http://ical4j.github.io'
-
-                scm {
-                    url 'https://github.com/ical4j/ical4j-zoneinfo-outlook'
-                    connection 'scm:git@github.com:ical4j/ical4j-zoneinfo-outlook.git'
-                    developerConnection 'scm:git@github.com:ical4j/ical4j-zoneinfo-outlook.git'
-                }
-
-                licenses {
-                    license {
-                        name 'iCal4j - License'
-                        url 'https://raw.githubusercontent.com/ical4j/ical4j/master/LICENSE'
-                        distribution 'repo'
-                    }
-                }
-
-                developers {
-                    developer {
-                        id 'fortuna'
-                        name 'Ben Fortuna'
-                    }
-                }
-            }
-        }
-    }
-}
 
 publishing {
     publications {
@@ -158,39 +96,20 @@ publishing {
             }
         }
     }
-}
 
-signing {
-    required { isReleaseVersion && gradle.taskGraph.hasTask("uploadArchives") }
-//    sign configurations.archives
-    sign publishing.publications.mavenArtifacts
-}
-
-bintray {
-    user = bintray_user
-    key = bintray_key
-    pkg {
-        repo = 'maven'
-        name = 'ical4j-zoneinfo-outlook'
-        userOrg = 'ical4j'
-        licenses = ['BSD']
-        vcsUrl = 'https://github.com/ical4j/ical4j-zoneinfo-outlook.git'
-        version {
-            name = scmVersion.version
-            desc = "iCal4j ZoneInfo Outlook $scmVersion.version"
-            released  = new Date()
-            vcsTag = "ical4j-zoneinfo-outlook-$scmVersion.version"
-            gpg {
-                sign = isReleaseVersion
-            }
-            mavenCentralSync {
-                sync = isReleaseVersion
-                user = sonatype_username //OSS user token: mandatory
-                password = sonatype_password //OSS user password: mandatory
-                close = '0' //Optional property. By default the staging repository is closed and artifacts are released to Maven Central. You can optionally turn this behaviour off (by puting 0 as value) and release the version manually.
+    repositories {
+        maven {
+            name = "OSSRH"
+            url = version.endsWith('SNAPSHOT') ? "https://oss.sonatype.org/content/repositories/snapshots/" : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
             }
         }
     }
-//    configurations = ['archives']
-    publications = ['mavenArtifacts']
+}
+
+signing {
+    required = true
+    sign publishing.publications.mavenArtifacts
 }
