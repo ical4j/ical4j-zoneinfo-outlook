@@ -1,14 +1,15 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2018c//EN
+PRODID:-//tzurl.org//NONSGML Olson 2021a//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:Asia/Vientiane
-TZURL:http://tzurl.org/zoneinfo-outlook-global/Asia/Vientiane
-X-LIC-LOCATION:Asia/Vientiane
+TZID:/tzurl.org/2021a/Asia/Bangkok
+LAST-MODIFIED:20210429T002737Z
+TZURL:http://tzurl.org/zoneinfo-outlook-global/Asia/Bangkok
+X-LIC-LOCATION:Asia/Bangkok
 BEGIN:STANDARD
+TZNAME:+07
 TZOFFSETFROM:+0700
 TZOFFSETTO:+0700
-TZNAME:+07
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE

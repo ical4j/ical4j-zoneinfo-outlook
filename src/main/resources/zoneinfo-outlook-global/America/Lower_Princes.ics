@@ -1,14 +1,15 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2018c//EN
+PRODID:-//tzurl.org//NONSGML Olson 2021a//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:America/Lower_Princes
-TZURL:http://tzurl.org/zoneinfo-outlook-global/America/Lower_Princes
-X-LIC-LOCATION:America/Lower_Princes
+TZID:/tzurl.org/2021a/America/Curacao
+LAST-MODIFIED:20210429T002737Z
+TZURL:http://tzurl.org/zoneinfo-outlook-global/America/Curacao
+X-LIC-LOCATION:America/Curacao
 BEGIN:STANDARD
+TZNAME:AST
 TZOFFSETFROM:-0400
 TZOFFSETTO:-0400
-TZNAME:AST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE

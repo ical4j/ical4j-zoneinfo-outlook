@@ -1,14 +1,15 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2018c//EN
+PRODID:-//tzurl.org//NONSGML Olson 2021a//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:Africa/Ouagadougou
-TZURL:http://tzurl.org/zoneinfo-outlook-global/Africa/Ouagadougou
-X-LIC-LOCATION:Africa/Ouagadougou
+TZID:/tzurl.org/2021a/Africa/Abidjan
+LAST-MODIFIED:20210429T002737Z
+TZURL:http://tzurl.org/zoneinfo-outlook-global/Africa/Abidjan
+X-LIC-LOCATION:Africa/Abidjan
 BEGIN:STANDARD
+TZNAME:GMT
 TZOFFSETFROM:+0000
 TZOFFSETTO:+0000
-TZNAME:GMT
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE

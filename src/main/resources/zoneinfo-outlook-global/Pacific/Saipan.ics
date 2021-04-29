@@ -1,14 +1,15 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2018c//EN
+PRODID:-//tzurl.org//NONSGML Olson 2021a//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:Pacific/Saipan
-TZURL:http://tzurl.org/zoneinfo-outlook-global/Pacific/Saipan
-X-LIC-LOCATION:Pacific/Saipan
+TZID:/tzurl.org/2021a/Pacific/Guam
+LAST-MODIFIED:20210429T002737Z
+TZURL:http://tzurl.org/zoneinfo-outlook-global/Pacific/Guam
+X-LIC-LOCATION:Pacific/Guam
 BEGIN:STANDARD
+TZNAME:ChST
 TZOFFSETFROM:+1000
 TZOFFSETTO:+1000
-TZNAME:ChST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE

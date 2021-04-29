@@ -4,4 +4,3 @@ build
 .gradle
 zones.h
 zones.tab
-gradle.properties
