@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2021a//EN
+PRODID:-//tzurl.org//NONSGML Olson 2022a//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2021a/Atlantic/Reykjavik
-LAST-MODIFIED:20210429T002737Z
+TZID:/tzurl.org/2022a/Atlantic/Reykjavik
+LAST-MODIFIED:20220317T223604Z
 TZURL:http://tzurl.org/zoneinfo-outlook-global/Atlantic/Reykjavik
 X-LIC-LOCATION:Atlantic/Reykjavik
 BEGIN:STANDARD
