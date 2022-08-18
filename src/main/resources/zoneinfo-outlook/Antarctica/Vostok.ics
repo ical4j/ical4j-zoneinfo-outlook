@@ -1,11 +1,11 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2022a//EN
+PRODID:-//tzurl.org//NONSGML Olson 2022c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:Antarctica/Vostok
-LAST-MODIFIED:20220317T223602Z
-TZURL:http://tzurl.org/zoneinfo-outlook/Antarctica/Vostok
-X-LIC-LOCATION:Antarctica/Vostok
+TZID:Asia/Urumqi
+LAST-MODIFIED:20220816T024022Z
+TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Urumqi
+X-LIC-LOCATION:Asia/Urumqi
 BEGIN:STANDARD
 TZNAME:+06
 TZOFFSETFROM:+0600

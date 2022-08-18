@@ -1,11 +1,11 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2022a//EN
+PRODID:-//tzurl.org//NONSGML Olson 2022c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2022a/Europe/Monaco
-LAST-MODIFIED:20220317T223604Z
-TZURL:http://tzurl.org/zoneinfo-outlook-global/Europe/Monaco
-X-LIC-LOCATION:Europe/Monaco
+TZID:/tzurl.org/2022c/Europe/Paris
+LAST-MODIFIED:20220816T024023Z
+TZURL:http://tzurl.org/zoneinfo-outlook-global/Europe/Paris
+X-LIC-LOCATION:Europe/Paris
 BEGIN:DAYLIGHT
 TZNAME:CEST
 TZOFFSETFROM:+0100
