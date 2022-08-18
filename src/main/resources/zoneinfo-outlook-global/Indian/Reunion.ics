@@ -1,11 +1,11 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2022a//EN
+PRODID:-//tzurl.org//NONSGML Olson 2022c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2022a/Indian/Reunion
-LAST-MODIFIED:20220317T223604Z
-TZURL:http://tzurl.org/zoneinfo-outlook-global/Indian/Reunion
-X-LIC-LOCATION:Indian/Reunion
+TZID:/tzurl.org/2022c/Asia/Dubai
+LAST-MODIFIED:20220816T024023Z
+TZURL:http://tzurl.org/zoneinfo-outlook-global/Asia/Dubai
+X-LIC-LOCATION:Asia/Dubai
 BEGIN:STANDARD
 TZNAME:+04
 TZOFFSETFROM:+0400
