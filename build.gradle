@@ -40,6 +40,30 @@ javadoc {
     }
 }
 
+scmVersion {
+    tag {
+        prefix = 'ical4j-zoneinfo-outlook-'
+    }
+    versionCreator 'versionWithBranch'
+    branchVersionCreator = [
+            'master': 'simple'
+    ]
+}
+
+group = 'org.mnode.ical4j'
+description = 'Alternate timezone definitions for greater compatbility with Outlook'
+version = scmVersion.version
+
+jar {
+    manifest {
+        attributes (
+                'Implementation-Title': 'iCal4j ZoneInfo Outlook',
+                'Implementation-Version': version,
+                'Implementation-Vendor': 'Ben Fortuna'
+        )
+    }
+}
+
 task javadocJar(type: Jar, dependsOn: javadoc) {
     archiveClassifier.set('javadoc')
     from 'build/docs/javadoc'
@@ -54,20 +78,6 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
-
-scmVersion {
-    tag {
-        prefix = 'ical4j-zoneinfo-outlook-'
-    }
-    versionCreator 'versionWithBranch'
-    branchVersionCreator = [
-        'master': 'simple'
-    ]
-}
-
-group = 'org.mnode.ical4j'
-description = 'Alternate timezone definitions for greater compatbility with Outlook'
-version = scmVersion.version
 
 ext {
     isReleaseVersion = !version.endsWith("SNAPSHOT")
