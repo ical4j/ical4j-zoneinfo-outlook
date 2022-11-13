@@ -61,7 +61,7 @@ public class OutlookTimeZoneRegistryFactoryTest {
         Assert.assertNotNull(registry);
         TimeZone tz = registry.getTimeZone("Australia/Melbourne");
         Assert.assertEquals("Australia/Melbourne", tz.getVTimeZone().getRequiredProperty(Property.TZID).getValue());
-        Assert.assertEquals("http://tzurl.org/zoneinfo-outlook/Australia/Melbourne",
+        Assert.assertEquals("http://www.tzurl.org/zoneinfo-outlook/Australia/Melbourne",
                 tz.getVTimeZone().getRequiredProperty(Property.TZURL).getValue());
     }
     
@@ -72,7 +72,7 @@ public class OutlookTimeZoneRegistryFactoryTest {
         Assert.assertNotNull(registry);
         TimeZone tz = registry.getTimeZone("Australia/Melbourne");
         Assert.assertEquals("Australia/Melbourne", tz.getVTimeZone().getRequiredProperty(Property.TZID).getValue());
-        Assert.assertEquals("http://tzurl.org/zoneinfo-outlook/Australia/Melbourne",
+        Assert.assertEquals("http://www.tzurl.org/zoneinfo-outlook/Australia/Melbourne",
                 tz.getVTimeZone().getRequiredProperty(Property.TZURL).getValue());
     }
 }

@@ -1,11 +1,11 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2022e//EN
+PRODID:-//tzurl.org//NONSGML Olson 2022f//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:America/Rainy_River
-LAST-MODIFIED:20221013T075636Z
-TZURL:http://tzurl.org/zoneinfo-outlook/America/Rainy_River
-X-LIC-LOCATION:America/Rainy_River
+TZID:America/Winnipeg
+LAST-MODIFIED:20221105T024526Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook/America/Winnipeg
+X-LIC-LOCATION:America/Winnipeg
 BEGIN:DAYLIGHT
 TZNAME:CDT
 TZOFFSETFROM:-0600
