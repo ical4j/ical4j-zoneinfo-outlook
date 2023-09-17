@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2022f//EN
+PRODID:-//tzurl.org//NONSGML Olson 2023c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2022f/America/Toronto
-LAST-MODIFIED:20221105T024528Z
+TZID:/tzurl.org/2023c/America/Toronto
+LAST-MODIFIED:20230911T053113Z
 TZURL:https://www.tzurl.org/zoneinfo-outlook-global/America/Toronto
 X-LIC-LOCATION:America/Toronto
 BEGIN:DAYLIGHT

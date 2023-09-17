@@ -15,11 +15,16 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
 dependencies {
     api "org.mnode.ical4j:ical4j:$ical4jVersion"
 
 
-    testCompile "org.codehaus.groovy:groovy:$groovyVersion"
+    testImplementation "org.codehaus.groovy:groovy:$groovyVersion"
 
     // junit
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.0'
@@ -64,21 +69,6 @@ jar {
     }
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    archiveClassifier.set('javadoc')
-    from 'build/docs/javadoc'
-}
-
-task sourcesJar(type: Jar) {
-    from sourceSets.main.allSource
-    archiveClassifier.set('sources')
-}
-
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
-
 ext {
     isReleaseVersion = !version.endsWith("SNAPSHOT")
 }
@@ -87,8 +77,6 @@ publishing {
     publications {
         mavenArtifacts(MavenPublication) {
             from components.java
-            artifact javadocJar
-            artifact sourcesJar
             pom.withXml {
                 asNode().appendNode('name', project.name)
                 asNode().appendNode('description', project.description)
