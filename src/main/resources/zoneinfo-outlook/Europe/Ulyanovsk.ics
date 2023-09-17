@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2022f//EN
+PRODID:-//tzurl.org//NONSGML Olson 2023c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
 TZID:Europe/Ulyanovsk
-LAST-MODIFIED:20221105T024526Z
+LAST-MODIFIED:20230911T053111Z
 TZURL:https://www.tzurl.org/zoneinfo-outlook/Europe/Ulyanovsk
 X-LIC-LOCATION:Europe/Ulyanovsk
 BEGIN:STANDARD

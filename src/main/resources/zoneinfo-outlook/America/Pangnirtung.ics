@@ -1,11 +1,11 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2022f//EN
+PRODID:-//tzurl.org//NONSGML Olson 2023c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:America/Pangnirtung
-LAST-MODIFIED:20221105T024526Z
-TZURL:https://www.tzurl.org/zoneinfo-outlook/America/Pangnirtung
-X-LIC-LOCATION:America/Pangnirtung
+TZID:America/Iqaluit
+LAST-MODIFIED:20230911T053111Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook/America/Iqaluit
+X-LIC-LOCATION:America/Iqaluit
 BEGIN:DAYLIGHT
 TZNAME:EDT
 TZOFFSETFROM:-0500
