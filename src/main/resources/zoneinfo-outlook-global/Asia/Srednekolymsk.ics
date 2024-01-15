@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2023c//EN
+PRODID:-//tzurl.org//NONSGML Olson 2023d//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2023c/Asia/Srednekolymsk
-LAST-MODIFIED:20230911T053113Z
+TZID:/tzurl.org/2023d/Asia/Srednekolymsk
+LAST-MODIFIED:20231222T233400Z
 TZURL:https://www.tzurl.org/zoneinfo-outlook-global/Asia/Srednekolymsk
 X-LIC-LOCATION:Asia/Srednekolymsk
 BEGIN:STANDARD

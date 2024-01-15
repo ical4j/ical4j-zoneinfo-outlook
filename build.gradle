@@ -29,7 +29,7 @@ dependencies {
     // junit
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.0'
 
-    testImplementation platform("org.spockframework:spock-bom:2.1-groovy-3.0"),
+    testImplementation platform("org.spockframework:spock-bom:$spockVersion"),
         "org.spockframework:spock-core",
         "org.slf4j:slf4j-log4j12:$slf4jVersion"
 }
@@ -63,7 +63,7 @@ jar {
     manifest {
         attributes (
                 'Implementation-Title': 'iCal4j ZoneInfo Outlook',
-                'Implementation-Version': version,
+                'Implementation-Version': archiveVersion,
                 'Implementation-Vendor': 'Ben Fortuna'
         )
     }
@@ -102,7 +102,8 @@ publishing {
     repositories {
         maven {
             name = "OSSRH"
-            url = version.endsWith('SNAPSHOT') ? "https://oss.sonatype.org/content/repositories/snapshots/" : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            url = version.endsWith('SNAPSHOT') ? "https://oss.sonatype.org/content/repositories/snapshots/" : \
+                    "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
             credentials {
                 username = System.getenv("MAVEN_USERNAME")
                 password = System.getenv("MAVEN_PASSWORD")
