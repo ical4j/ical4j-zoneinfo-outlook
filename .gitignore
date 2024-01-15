@@ -4,3 +4,5 @@ build
 .gradle
 zones.h
 zones.tab
+**/zoneinfo-outlook/**/index.html
+**/zoneinfo-outlook-global/**/index.html

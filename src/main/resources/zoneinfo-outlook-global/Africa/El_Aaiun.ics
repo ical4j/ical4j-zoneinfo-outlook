@@ -1,10 +1,10 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2023c//EN
+PRODID:-//tzurl.org//NONSGML Olson 2023d//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2023c/Africa/El_Aaiun
+TZID:/tzurl.org/2023d/Africa/El_Aaiun
 TZUNTIL:20870511T020001Z
-LAST-MODIFIED:20230911T053113Z
+LAST-MODIFIED:20231222T233400Z
 TZURL:https://www.tzurl.org/zoneinfo-outlook-global/Africa/El_Aaiun
 X-LIC-LOCATION:Africa/El_Aaiun
 BEGIN:STANDARD

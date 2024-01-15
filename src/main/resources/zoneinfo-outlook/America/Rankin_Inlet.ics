@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2023c//EN
+PRODID:-//tzurl.org//NONSGML Olson 2023d//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
 TZID:America/Rankin_Inlet
-LAST-MODIFIED:20230911T053111Z
+LAST-MODIFIED:20231222T233358Z
 TZURL:https://www.tzurl.org/zoneinfo-outlook/America/Rankin_Inlet
 X-LIC-LOCATION:America/Rankin_Inlet
 BEGIN:DAYLIGHT
