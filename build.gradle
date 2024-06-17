@@ -12,8 +12,8 @@ repositories {
     mavenCentral()
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 
 java {
     withJavadocJar()
@@ -23,7 +23,6 @@ java {
 dependencies {
     api "org.mnode.ical4j:ical4j:$ical4jVersion"
 
-
     testImplementation "org.codehaus.groovy:groovy:$groovyVersion"
 
     // junit
@@ -31,7 +30,7 @@ dependencies {
 
     testImplementation platform("org.spockframework:spock-bom:$spockVersion"),
         "org.spockframework:spock-core",
-        "org.slf4j:slf4j-log4j12:$slf4jVersion"
+        "org.apache.logging.log4j:log4j-core:$log4jVersion"
 }
 
 test {
