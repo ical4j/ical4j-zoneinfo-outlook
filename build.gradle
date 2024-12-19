@@ -1,5 +1,4 @@
 plugins {
-    id 'java'
     id 'groovy'
     id "biz.aQute.bnd.builder" version "5.1.2"
     id 'java-library'
@@ -40,7 +39,7 @@ test {
 javadoc {
     options {
         links 'https://docs.oracle.com/en/java/javase/11/docs/api/',
-            'http://ical4j.github.io/docs/ical4j/api/4.0.0-alpha6/'
+            'https://javadoc.io/doc/org.mnode.ical4j/ical4j/latest'
     }
 }
 
