@@ -1,11 +1,11 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2023d//EN
+PRODID:-//tzurl.org//NONSGML Olson 2025a//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2023d/EET
-LAST-MODIFIED:20231222T233400Z
-TZURL:https://www.tzurl.org/zoneinfo-outlook-global/EET
-X-LIC-LOCATION:EET
+TZID:/tzurl.org/2025a/Europe/Athens
+LAST-MODIFIED:20250121T082935Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook-global/Europe/Athens
+X-LIC-LOCATION:Europe/Athens
 BEGIN:DAYLIGHT
 TZNAME:EEST
 TZOFFSETFROM:+0200

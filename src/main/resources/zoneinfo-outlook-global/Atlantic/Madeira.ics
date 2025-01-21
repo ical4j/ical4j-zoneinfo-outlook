@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2023d//EN
+PRODID:-//tzurl.org//NONSGML Olson 2025a//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2023d/Atlantic/Madeira
-LAST-MODIFIED:20231222T233400Z
+TZID:/tzurl.org/2025a/Atlantic/Madeira
+LAST-MODIFIED:20250121T082935Z
 TZURL:https://www.tzurl.org/zoneinfo-outlook-global/Atlantic/Madeira
 X-LIC-LOCATION:Atlantic/Madeira
 BEGIN:DAYLIGHT

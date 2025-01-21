@@ -1,11 +1,11 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2023d//EN
+PRODID:-//tzurl.org//NONSGML Olson 2025a//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:Asia/Choibalsan
-LAST-MODIFIED:20231222T233358Z
-TZURL:https://www.tzurl.org/zoneinfo-outlook/Asia/Choibalsan
-X-LIC-LOCATION:Asia/Choibalsan
+TZID:Asia/Ulaanbaatar
+LAST-MODIFIED:20250121T082933Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook/Asia/Ulaanbaatar
+X-LIC-LOCATION:Asia/Ulaanbaatar
 BEGIN:STANDARD
 TZNAME:+08
 TZOFFSETFROM:+0800
