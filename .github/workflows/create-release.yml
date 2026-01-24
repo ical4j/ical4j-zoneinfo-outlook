@@ -4,8 +4,7 @@ on:
   push:
     tags:
       - "ical4j-zoneinfo-outlook-*"
-    tags-ignore:
-      - "ical4j-zoneinfo-outlook-*-pre"
+      - "!ical4j-zoneinfo-outlook-*-pre"
 
 jobs:
   build:
