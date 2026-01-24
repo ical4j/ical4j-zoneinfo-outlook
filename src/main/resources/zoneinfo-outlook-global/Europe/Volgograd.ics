@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2025a//EN
+PRODID:-//tzurl.org//NONSGML Olson 2025c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2025a/Europe/Volgograd
-LAST-MODIFIED:20250121T082935Z
+TZID:/tzurl.org/2025c/Europe/Volgograd
+LAST-MODIFIED:20251211T094731Z
 TZURL:https://www.tzurl.org/zoneinfo-outlook-global/Europe/Volgograd
 X-LIC-LOCATION:Europe/Volgograd
 BEGIN:STANDARD

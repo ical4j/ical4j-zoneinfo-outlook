@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2025a//EN
+PRODID:-//tzurl.org//NONSGML Olson 2025c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2025a/Asia/Novokuznetsk
-LAST-MODIFIED:20250121T082935Z
+TZID:/tzurl.org/2025c/Asia/Novokuznetsk
+LAST-MODIFIED:20251211T094731Z
 TZURL:https://www.tzurl.org/zoneinfo-outlook-global/Asia/Novokuznetsk
 X-LIC-LOCATION:Asia/Novokuznetsk
 BEGIN:STANDARD

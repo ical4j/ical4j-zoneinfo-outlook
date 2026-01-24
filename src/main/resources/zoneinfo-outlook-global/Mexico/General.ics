@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2025a//EN
+PRODID:-//tzurl.org//NONSGML Olson 2025c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2025a/America/Mexico_City
-LAST-MODIFIED:20250121T082935Z
+TZID:/tzurl.org/2025c/America/Mexico_City
+LAST-MODIFIED:20251211T094731Z
 TZURL:https://www.tzurl.org/zoneinfo-outlook-global/America/Mexico_City
 X-LIC-LOCATION:America/Mexico_City
 BEGIN:STANDARD
