@@ -1,35 +1,28 @@
 plugins {
     id 'groovy'
-    id "biz.aQute.bnd.builder" version "5.1.2"
+    id "biz.aQute.bnd.builder" version "$bndVersion"
     id 'java-library'
     id 'maven-publish'
     id 'signing'
-    id 'pl.allegro.tech.build.axion-release' version '1.13.1'
+    id 'pl.allegro.tech.build.axion-release' version '1.20.1'
 }
 
 repositories {
     mavenCentral()
 }
 
-sourceCompatibility = 11
-targetCompatibility = 11
-
 java {
+    sourceCompatibility = 11
+    targetCompatibility = 11
+
     withJavadocJar()
     withSourcesJar()
 }
 
 dependencies {
-    api "org.mnode.ical4j:ical4j:$ical4jVersion"
+    api libs.ical4j
 
-    testImplementation "org.codehaus.groovy:groovy:$groovyVersion"
-
-    // junit
-    testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.0'
-
-    testImplementation platform("org.spockframework:spock-bom:$spockVersion"),
-        "org.spockframework:spock-core",
-        "org.apache.logging.log4j:log4j-core:$log4jVersion"
+    testImplementation libs.junit.platform, libs.groovy, platform(libs.spock.bom), libs.spock.core, libs.junit.jupiter, libs.log4j.core
 }
 
 test {
@@ -54,7 +47,7 @@ scmVersion {
 }
 
 group = 'org.mnode.ical4j'
-description = 'Alternate timezone definitions for greater compatbility with Outlook'
+description = 'Alternate timezone definitions for greater compatibility with Outlook'
 version = scmVersion.version
 
 jar {
@@ -99,9 +92,8 @@ publishing {
 
     repositories {
         maven {
-            name = "OSSRH"
-            url = version.endsWith('SNAPSHOT') ? "https://oss.sonatype.org/content/repositories/snapshots/" : \
-                    "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            name = "MavenCentral"
+            url = !isReleaseVersion ? "https://central.sonatype.com/repository/maven-snapshots/" : "https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/"
             credentials {
                 username = System.getenv("MAVEN_USERNAME")
                 password = System.getenv("MAVEN_PASSWORD")
