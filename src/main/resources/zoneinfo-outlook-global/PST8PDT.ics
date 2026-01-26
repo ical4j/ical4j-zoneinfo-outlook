@@ -1,11 +1,11 @@
 BEGIN:VCALENDAR
-PRODID:-//tzurl.org//NONSGML Olson 2023d//EN
+PRODID:-//tzurl.org//NONSGML Olson 2025c//EN
 VERSION:2.0
 BEGIN:VTIMEZONE
-TZID:/tzurl.org/2023d/PST8PDT
-LAST-MODIFIED:20231222T233400Z
-TZURL:https://www.tzurl.org/zoneinfo-outlook-global/PST8PDT
-X-LIC-LOCATION:PST8PDT
+TZID:/tzurl.org/2025c/America/Los_Angeles
+LAST-MODIFIED:20251211T094731Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook-global/America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
 BEGIN:DAYLIGHT
 TZNAME:PDT
 TZOFFSETFROM:-0800

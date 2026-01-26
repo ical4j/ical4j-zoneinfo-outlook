@@ -31,14 +31,13 @@
  */
 package net.fortuna.ical4j.zoneinfo.outlook;
 
-import junit.framework.Assert;
 import net.fortuna.ical4j.model.Property;
 import net.fortuna.ical4j.model.TimeZone;
 import net.fortuna.ical4j.model.TimeZoneRegistry;
 import net.fortuna.ical4j.model.TimeZoneRegistryFactory;
-
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -49,7 +48,7 @@ public class OutlookTimeZoneRegistryFactoryTest {
 
     private OutlookTimeZoneRegistryFactory factory;
     
-    @Before
+    @BeforeEach
     public void runBeforeEachTest() {
         factory = new OutlookTimeZoneRegistryFactory();
     }
@@ -58,21 +57,21 @@ public class OutlookTimeZoneRegistryFactoryTest {
     public void testCreateRegistry() {
         TimeZoneRegistry registry = factory.createRegistry();
         
-        Assert.assertNotNull(registry);
+        Assertions.assertNotNull(registry);
         TimeZone tz = registry.getTimeZone("Australia/Melbourne");
-        Assert.assertEquals("Australia/Melbourne", tz.getVTimeZone().getRequiredProperty(Property.TZID).getValue());
-        Assert.assertEquals("https://www.tzurl.org/zoneinfo-outlook/Australia/Melbourne",
+        Assertions.assertEquals("Australia/Melbourne", tz.getVTimeZone().getRequiredProperty(Property.TZID).getValue());
+        Assertions.assertEquals("https://www.tzurl.org/zoneinfo-outlook/Australia/Melbourne",
                 tz.getVTimeZone().getRequiredProperty(Property.TZURL).getValue());
     }
     
     @Test
     public void testCreateRegistryConfigured() {
         TimeZoneRegistry registry = TimeZoneRegistryFactory.getInstance().createRegistry();
-        
-        Assert.assertNotNull(registry);
+
+        Assertions.assertNotNull(registry);
         TimeZone tz = registry.getTimeZone("Australia/Melbourne");
-        Assert.assertEquals("Australia/Melbourne", tz.getVTimeZone().getRequiredProperty(Property.TZID).getValue());
-        Assert.assertEquals("https://www.tzurl.org/zoneinfo-outlook/Australia/Melbourne",
+        Assertions.assertEquals("Australia/Melbourne", tz.getVTimeZone().getRequiredProperty(Property.TZID).getValue());
+        Assertions.assertEquals("https://www.tzurl.org/zoneinfo-outlook/Australia/Melbourne",
                 tz.getVTimeZone().getRequiredProperty(Property.TZURL).getValue());
     }
 }
